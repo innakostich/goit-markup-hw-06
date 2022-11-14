@@ -47,11 +47,50 @@
     <section class="section hero">
       <h1 class="hero-title">Ефективні рішення для <br> вашого бізнесу</h1>  
       <button data-modal-open type="button" class="order-button">Замовити послугу</button>
-      <p></p>
+       <!--Modal-->
       <div  data-modal class="backdrop is-hidden">
       <div class="modal">
-      <p></p>
-        <button data-modal-close type="button" class="close"></button>
+         <!--Modal Window 1-->
+         <form class="form modal-form">
+           <button data-modal-close type="button" class="close-button"></button>
+           <h3 class=" modal-title">Залиште свої дані, ми вам передзвонимо</h3>
+          <div class="form-field">
+           <label for="name">Ім'я</label>
+           <input
+           type="text"
+           name="name"
+           id="name"
+           placeholder=""
+           autofocus
+         />
+           </div>
+
+      <div class="form-field">
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel" placeholder="" />
+      </div>
+
+      <div class="form-field">
+        <label for="mail">Пошта</label>
+        <input type="email" name="mail" id="mail" placeholder=""/>
+      </div>
+
+      <div class="form-field">
+        <label for="comment">Коментар</label>
+        <textarea
+          class="comment" name="comment" id="comment" rows="8"
+          placeholder="Введіть текст"
+        ></textarea>
+      </div>
+
+      <div class="form-field">
+        <input type="checkbox" name="policy" id="policy" />
+        <label for="policy">Погоджуюся з розсилкою та приймаю<span><a href="" class="checkbox-link">Умови договору</a></span></label>
+      </div>
+
+         <button type="submit" class="submit-button">Відправити</button>
+        </form>
+      </div>
       </div>
     </div>
     </section>
@@ -520,7 +559,7 @@
           </ul>
 
         </div>
-      </div>
+      
       <div class="footer-subscribtion-container">
           <h4 class="subscription-title">Підпишіться на розсилку</h4>
            <form class="form-subscribtion"></form>
@@ -532,7 +571,8 @@
              </svg></button>
            </form>
       </div>
-    </div> 
+    </div>
+  </div> 
   </footer>
   <script src="./js/modal.js"></script>
 </body>
