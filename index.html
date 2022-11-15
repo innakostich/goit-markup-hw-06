@@ -51,39 +51,42 @@
       <div  data-modal class="backdrop is-hidden">
       <div class="modal">
          <!--Modal Window 1-->
-       
          <form class="form modal-form">
+            <button data-modal-close type="button" class="close-button"><svg class="icon-close" width="30"
+              height="30">
+             <use href="./images/icons.svg#icon-close"></use>
+             </svg></button>
            <h3 class=" modal-title">Залиште свої дані, ми вам передзвонимо</h3>
-         <div class="inputs">
+        <div class="inputs">
           <div class="form-field">
             <label for="name">Ім'я</label>
             <input type="text" name="name" id="name" placeholder="" autofocus />
             </div>
  
-       <div class="form-field">
+           <div class="form-field">
          <label for="tel">Телефон</label>
          <input type="tel" name="tel" id="tel" placeholder="" />
-       </div>
+           </div>
  
-       <div class="form-field">
+             <div class="form-field">
          <label for="mail">Пошта</label>
          <input type="email" name="mail" id="mail" placeholder=""/>
-       </div>
+            </div>
  
-       <div class="form-field">
+             <div class="form-field">
          <label for="comment">Коментар</label>
          <textarea
            class="comment" name="comment" id="comment" rows="8"
            placeholder="Введіть текст"
          ></textarea>
-       </div>
-         </div>
-
+              </div>
+                      
       <div class="form-field">
         <input type="checkbox" name="policy" id="policy" />
         <label for="policy">Погоджуюся з розсилкою та приймаю<span><a href="" class="checkbox-link">Умови договору</a></span></label>
       </div>
 
+    </div>
          <button type="submit" class="submit-button">Відправити</button>
         </form>
       </div>
@@ -569,7 +572,21 @@
               </svg></button>
              </div>
            </form>
-           
+           <script>
+            (() => {
+              document
+                .querySelector('.form-subscribtion')
+                .addEventListener('submit', e => {
+                  e.preventDefault();
+      
+                  new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                  );
+      
+                  e.currentTarget.reset();
+                });
+            })();
+          </script>
       </div>
     </div>
   </div> 
