@@ -51,8 +51,8 @@
       <div  data-modal class="backdrop is-hidden">
       <div class="modal">
          <!--Modal Window 1-->
+       
          <form class="form modal-form">
-           <button data-modal-close type="button" class="close-button"></button>
            <h3 class=" modal-title">Залиште свої дані, ми вам передзвонимо</h3>
          <div class="inputs">
           <div class="form-field">
@@ -569,21 +569,7 @@
               </svg></button>
              </div>
            </form>
-           <script>
-            (() => {
-              document
-                .querySelector('.form-subscribtion')
-                .addEventListener('submit', e => {
-                  e.preventDefault();
-      
-                  new FormData(e.currentTarget).forEach((value, name) =>
-                    console.log(`${name}: ${value}`),
-                  );
-      
-                  e.currentTarget.reset();
-                });
-            })();
-          </script>
+           
       </div>
     </div>
   </div> 

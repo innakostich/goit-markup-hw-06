@@ -276,14 +276,10 @@ list-style: none;
     visibility: hidden;  
   }
   .close-button{
-  
-    min-width: 30px;
-    min-height: 30px;
-    margin-right: 8px;
     padding: 0;
     border: none;
-    background-color: transparent; 
-    background-image: url(../images/close.svg); 
+    background-color: var(--contacts-text-color);
+    fill: var(--primary-text-color);
     cursor: pointer; 
 
   }
