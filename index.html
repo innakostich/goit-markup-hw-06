@@ -48,49 +48,60 @@
       <h1 class="hero-title">Ефективні рішення для <br> вашого бізнесу</h1>  
       <button data-modal-open type="button" class="order-button">Замовити послугу</button>
        <!--Modal-->
-      <div  data-modal class="backdrop is-hidden">
+    <div  data-modal class="backdrop is-hidden">
       <div class="modal">
          <!--Modal Window 1-->
-         <form class="form modal-form">
-            <button data-modal-close type="button" class="close-button"><svg class="icon-close" width="30"
-              height="30">
-             <use href="./images/icons.svg#icon-close"></use>
-             </svg></button>
+         
+          <button class="close" data-modal-close>
+            <svg class="icon" width="30" height="30">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
            <h3 class=" modal-title">Залиште свої дані, ми вам передзвонимо</h3>
-            
-          <div class="inputs">
-            <div class="form-field">
-              <label for="name">Ім'я</label>
-              <input type="text" name="name" id="name" placeholder="" autofocus />
-              </div>
-   
-             <div class="form-field">
-           <label for="tel">Телефон</label>
-           <input type="tel" name="tel" id="tel" placeholder="" />
-             </div>
-   
-               <div class="form-field">
-           <label for="mail">Пошта</label>
-           <input type="email" name="mail" id="mail" placeholder=""/>
-              </div>
-   
-               <div class="form-field">
-           <label for="comment">Коментар</label>
-           <textarea
-             class="comment" name="comment" id="comment" rows="5"
-             placeholder="Введіть текст"
-           ></textarea>
-                </div>
-          </div>
-                      
-      <div class="form-field">
-        <input type="checkbox" name="policy" id="policy" />
-        <label for="policy">Погоджуюся з розсилкою та приймаю<span><a href="" class="checkbox-link">Умови договору</a></span></label>
-      </div>
+           <form class="form modal-form">
+              <label class="form-field">
+              <span class="form-lable">Ім'я</span>
+              <input type="text" class="form-input" name="user_name" placeholder=" " />
+                <svg class="field-icon" width="18"
+            height="18">
+            <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </label>
 
+          <label class="form-field">
+            <span class="form-lable">Телефон</span>
+            <input type="tel" class="form-input" name="user_tel" placeholder=" " />
+              <svg class="field-icon" width="18"
+          height="18">
+          <use href="./images/icons.svg#icon-phone"></use>  
+          </svg>
+        </label>
+   
+        <label class="form-field">
+          <span class="form-lable">Пошта</span>
+          <input type="text" class="form-input" name="user_mail" placeholder=" " />
+            <svg class="field-icon" width="18"
+        height="18">
+        <use href="./images/icons.svg#icon-email"></use>
+        </svg>
+      </label>
+   
+      <label class="form-field comment">
+        <span class="form-lable">Коментар</span>
+        <textarea class="form-input comment-input" name="comment" id="user-message" rows="6" placeholder="Введіть текст"></textarea>
+      </label>
+                      
+      <div class="modal-box">
+        <div role="group" class="agreement">
+          <label class="agreement-field">
+            Погоджуюся з розсилкою та приймаю <a href="" class="agreement-link">Умови договору</a>
+            <input type="checkbox" name="checkbox" value="agreement" class="checkbox visually-hidden" />
+            <span class="checkbox-icon"></span>
+          </label>
+        </div>
+      </div>
          <button type="submit" class="submit-button">Відправити</button>
         </form>
-      </div>
       </div>
     </div>
     </section>
@@ -563,11 +574,11 @@
       <!--Footer subscription container--> 
       <div class="footer-subscribtion-container">
           <h4 class="subscription-title">Підпишіться на розсилку</h4>
-           <form class="form-subscribtion"></form>
+           <form class="form-subscribtion">
              <div class="email-input">
-              <label for="mail"class="footer-email-field"></label>
-              <input type="email" class="footer-email-input" name="email" id="footer-mail" placeholder="E-mail" autocomplete="email"/>
-               <button type="btn-send" class="button-send-submit">Підписатися<svg class="icon-send" width="24"
+              <label class="footer-email-field"></label>
+              <input type="text" class="footer-email-input" name="email" id="footer-mail" placeholder="E-mail" autocomplete="email"/>
+               <button type="button" class="button-send-submit">Підписатися<svg class="icon-send" width="24"
                height="24">
               <use href="./images/icons.svg#icon-send"></use>
               </svg></button>
