@@ -248,16 +248,20 @@ list-style: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%) translateY(-50%);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   min-height: 581px;
   min-width: 528px;
   background-color: var(--contacts-text-color);
 
-  animation-name: swirl-in-fwd 0.8s ease-out both;
+  animation-name:  0.8s ease-out both;
 
 }
+.modal.modal-animation {
+  animation-name: swirl-in-fwd;
+}
+
 
 
 @keyframes swirl-in-fwd {
@@ -303,7 +307,10 @@ list-style: none;
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 28px;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
   }
+ 
   .form-field.comment {
     margin-bottom: 20px;
   }
@@ -314,6 +321,14 @@ list-style: none;
       padding-left: 40px;
       border-radius: 4px;
       border: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    .form-input:focus + .field-icon {
+      fill: var(--accent-color);
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .form-input:focus{
+      outline-color: var(--accent-color);
+      transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .form-lable {
       position: absolute;
@@ -327,12 +342,15 @@ list-style: none;
        color: rgba(117, 117, 117, 1);
       
    }
-   .field-icon {
+   
+  .field-icon {
     position: absolute;
     top: 50%;
-    left: 15px;
+    left: 10px;
     transform: translateY(-50%);
   }
+  
+
   .comment-input {
     resize: none;
     padding: 12px 16px;
@@ -352,27 +370,15 @@ list-style: none;
  .modal-box{
   text-align: center;
  }
- .agreement {
-  margin-bottom: 30px;
-}
-.agreement-link {
-  color: var(--accent-color);
-}
-.agreement-field {
-  position: relative;
-}
- 
 
 
-.form-field .icon {
-  
-}
 .comment-input {
+  display: block;
   resize: none;
   padding: 12px 16px;
   min-height: 120px;
 }
-textarea {
+.textarea {
    resize: none;
    margin: 0;
    padding: 10px 20px;
@@ -385,11 +391,37 @@ textarea {
     font-size: 12px;
     line-height: 14.06px;
 }
+.modal-form-checkbox{
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  border: 2px solid #9da4bd;
+  border-radius: 2px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0;
+ 
+}
+.modal-form-checkbox:checked {
+  outline-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-size: 16px 15px;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .agreement-link{
   color: var(--accent-color);
 }
 .agreement {
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
 }
 
 .agreement-field {
