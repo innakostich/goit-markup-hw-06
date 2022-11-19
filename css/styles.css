@@ -290,6 +290,7 @@ list-style: none;
     margin-right: 8px;
     margin-left: auto;
     background-color: transparent;
+    cursor: pointer;
   }
   .close:focus,
   .close:hover {
