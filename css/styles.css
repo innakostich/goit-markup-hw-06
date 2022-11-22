@@ -390,7 +390,7 @@ list-style: none;
   .modal-form-message {
     resize: none;
     padding: 12px 16px;
-    height: 120px;
+     height: 120px;
   }
 
 .modal-form-wrapper textarea::placeholder {
