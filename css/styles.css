@@ -89,9 +89,9 @@ padding-bottom: 0;
 }
 .site-nav,
 .contacts-list{
-display: flex;
-align-items: center;
-list-style: none;
+ display: flex;
+ align-items: center;
+ list-style: none;
 }
 
 .contacts-list{
